@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="Es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro Inteligente</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script> 
+
+</head>
+<body>
+    <div class="container" id="container">
+        
+        <div class="form-container register-container">
+            <form action="#">
+                <h1>Registrate aquí</h1>
+                <input type="text" id="nombreusuario" placeholder="Nombre de Usuario"required minlength="4">
+                <input type="email" placeholder="Correo electrónico"required>
+                <div class="password-wrapper">
+                <input type="password" id="contrasena" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$" title="Debe tener mínimo 8 caracteres, una mayúscula, una minúscula y un número" placeholder="Contraseña">
+                <!-- Contraseña registro -->
+                <span class="toggle-password" onclick="togglePassword('contrasena', this)">👁️</span></div>
+                <div class="password-wrapper">
+                <input type="password" id="confirmar" placeholder="Confirmar contraseña" required>
+                 <!-- Confirmar contraseña -->
+                <span class="toggle-password" onclick="togglePassword('confirmar', this)">👁️</span></div>
+                <div class="nivel-seguridad" id="nivelseguridad"></div>
+                <button type="submit" id="botonenviar">Registrarme</button>
+                <span>O usa tu cuenta</span>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social"><i class="lni lni-facebook-fill"></i></a>
+                    <a href="https://accounts.google.com/login?hl=es" target="_blank" rel="noopener noreferrer" class="social"><i class="lni lni-google"></i></a>
+                    <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social"><i class="lni lni-linkedin-original"></i></a>
+                </div>
+            </form>
+        </div>
+
+<div class="form-container login-container">
+    <form action="#">
+        <h1>Inicia sesión aquí</h1>
+        <input type="email" placeholder="Correo electrónico" required>
+        
+        <div class="password-wrapper">
+    <input type="password" id="loginPass" placeholder="Contraseña" required>
+    <!-- Contraseña login -->
+    <span class="toggle-password" onclick="togglePassword('loginPass', this)">👁️</span></div>
+
+        <div class="content">
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label for="checkbox">Recuérdame</label>
+            </div>
+            <div class="pass-link">
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXYGQFMRp8EKIpeYI6HqrhdTn5dUDlrWN76w&s" target="_blank" rel="noopener noreferrer">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+        <span>O usa tu cuenta</span>
+        <div class="social-container">
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="social"><i class="lni lni-facebook-fill"></i></a>
+            <a href="https://accounts.google.com/login?hl=es" target="_blank" rel="noopener noreferrer" class="social"><i class="lni lni-google"></i></a>
+            <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+    </form>
+</div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title">Hola 👋 <br> amigo</h1>
+                    <p>Si ya tienes una cuenta, puedes iniciar sesión aquí</p>
+                    <button class="ghost" id="login">Iniciar Sesión
+                        <i class="lni lni-arrow-left login"></i>
+                    </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">Bienvenido <br> ¡Diviertete!</h1>
+                    <p>Si no tienes cuenta, puedes registrarte aquí.</p>
+                    <button class="ghost" id="register">Registrar
+                        <i class="lni lni-arrow-right register"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
