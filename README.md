@@ -26,3 +26,5 @@ Puedes verlo en vivo aquí → https://venerable-fenglisu-87d56b.netlify.app/
 ## Materia
 
 Proyecto Integrador Web Multimedia
+
+Autor: Armando Miranda Caicedo
